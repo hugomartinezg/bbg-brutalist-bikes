@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .neo-shadow-sm {
+    box-shadow: 2px 2px 0px #0D0D0D;
+  }
+  .neo-shadow {
+    box-shadow: 4px 4px 0px #0D0D0D;
+  }
+  .neo-shadow-lg {
+    box-shadow: 6px 6px 0px #0D0D0D;
+  }
+  .neo-shadow-top {
+    box-shadow: 0px -4px 0px #0D0D0D;
+  }
+  .neo-border {
+    border: 2.5px solid #0D0D0D;
+  }
+  .neo-border-3 {
+    border: 3px solid #0D0D0D;
+  }
+  .neo-btn-press {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+  .neo-btn-press:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #0D0D0D;
+  }
+  .hazard-stripe {
+    background: repeating-linear-gradient(
+      -45deg,
+      #c8f322,
+      #c8f322 10px,
+      #0D0D0D 10px,
+      #0D0D0D 20px
+    );
+  }
+  .hazard-stripe-crimson {
+    background: repeating-linear-gradient(
+      -45deg,
+      #ba1a1a,
+      #ba1a1a 10px,
+      #0D0D0D 10px,
+      #0D0D0D 20px
+    );
+  }
+  .ticker-track {
+    animation: marquee 28s linear infinite;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
